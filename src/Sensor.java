@@ -9,4 +9,44 @@ public class Sensor{
   private List<Medicion> mediciones;
 
   //Constructor
-  public Sensor()
+  public Sensor(String idSensor, String marca, String modelo, double presicion, LocalDate ultimaCalibracion,){
+    this.idSensor = idSensor;
+    this.marca = marca;
+    this.modelo = modelo;
+    this.presicion = presicion;
+    this.estado = EstadoOperativo.Operativo; //por defectp
+    this.ultimaCalibracion = ultimaCalibracion;
+    this.mediciones = new ArrayList<>();
+  }
+
+  //getters y setters
+  public String getIdSensor(){
+    return idSensor;
+  }
+  public String getMarca(){
+    return idSensor;
+  }
+  public String getModelo(){
+    return modelo;
+  }
+  public double getPresicion(){
+    return presicion;
+  }
+  public EstadoOperativo getEstado(){
+    return estado;
+  }
+  public LocalDate getUltimaCalibracion(){
+    return ultimaCalibracion;
+  }
+  public List<Medicion> getMediciones(){
+    return Collections.unmodifiableList(mediciones);
+  }
+
+  
+  public void setEstado(EstadoOperativo estado){
+    this.estado = estado;
+  }
+  public void setUltimaCalibracion(LocalData ultimaCalibracion){
+    this.ultimaCalibracion = ultimaCalibracion;
+  }
+}
