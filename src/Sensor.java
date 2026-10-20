@@ -19,6 +19,20 @@ public class Sensor{
     this.mediciones = new ArrayList<>();
   }
 
+  //validaciones
+  public boolean validar(double mm) {
+        return mm >= 0.0 && mm <= 500.0;
+  }
+  
+  public boolean requiereCalibracion() {
+        if (this.ultimaCalibracion == null) {
+            return true;
+        }
+        Period periodo = Period.between(this.ultimaCalibracion, LocalDate.now());
+        return periodo.getYears() >= 1 || periodo.getMonths() >= 12;
+  }
+  
+  
   //getters y setters
   public String getIdSensor(){
     return idSensor;
