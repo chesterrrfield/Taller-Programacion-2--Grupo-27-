@@ -2,6 +2,7 @@ public class ResponsableTecnico extends Persona {
     // Atributos
     private String especialidad;
     private String numeroLicencia;
+    private EquipoRespuesta equipo;
 
     // Constructor
     public ResponsableTecnico (String dni, String nombre, String apellido, String correoElectronico, String celular, String especialidad, String numeroLicencia) {
