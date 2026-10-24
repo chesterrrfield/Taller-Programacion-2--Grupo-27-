@@ -7,11 +7,11 @@ public class Mantenimiento {
     private TipoMantenimiento tipo;
     private String descripcion;
     // Relacion con ResponsableTecnico
-    private List<ResponsableTecnico> responsablesTecnicos;
+    private ResponsableTecnico responsableTecnico;
     // Relacion con EstacionMeteorologica
-    private List<EstacionMeteorologica> estacionesMeteorologicas;
+    private EstacionMeteorologica estacionMeteorologica;
     // Relacion con Sensor
-    private List<Sensor> sensores;
+    private Sensor sensor;
 
 
     // Constructor
@@ -24,19 +24,26 @@ public class Mantenimiento {
 
 
     // Getters
-    public String getIdMantenimiento() {
-        return this.idMantenimiento;
-    }
+    public String getIdMantenimiento() { return this.idMantenimiento; }
+    public LocalDate getFecha() { return this.fecha; }
+    public TipoMantenimiento getTipo() { return this.tipo; }
+    public String getDescripcion() { return this.descripcion; }
 
-    public LocalDate getFecha() {
-        return this.fecha;
-    }
+     private ResponsableTecnico responsableTecnico;
+    // Relacion con EstacionMeteorologica
+    private EstacionMeteorologica estacionMeteorologica;
+    // Relacion con Sensor
+    private Sensor sensor;
 
-    public TipoMantenimiento getTipo() {
-        return this.tipo;
-    }
+    // Setter y Getter para ResponsableTecnico
+    public ResponsableTecnico getResponsableTecnico() { return responsableTecnico; }
+    public void setResponsableTecnico(ResponsableTecnico responsableTecnico) { this.responsableTecnico = responsableTecnico; }
 
-    public String getDescripcion() {
-        return this.descripcion;
-    }
+    // Setter y Getter para EstacionMeteorologica
+    public EstacionMeteorologica getEstacionMeteorologica() { return estacionMeteorologica; }
+    public void setEstacionMeteorologica(EstacionMeteorologica estacionMeteorologica) { this.estacionMeteorologica = estacionMeteorologica; }
+   
+    // Setter y Getter para Sensor
+    public Sensor getSensor() { return sensor; }
+    public void setSensor(Sensor sensor) { this.sensor = sensor; }
 }
