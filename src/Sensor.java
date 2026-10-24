@@ -9,7 +9,7 @@ public class Sensor{
   private List<Medicion> mediciones;
 
   //Constructor
-  public Sensor(String idSensor, String marca, String modelo, double presicion, LocalDate ultimaCalibracion,){
+  public Sensor(String idSensor, String marca, String modelo, double presicion, LocalDate ultimaCalibracion){
     this.idSensor = idSensor;
     this.marca = marca;
     this.modelo = modelo;
