@@ -6,6 +6,12 @@ public class Mantenimiento {
     private LocalDate fecha;
     private TipoMantenimiento tipo;
     private String descripcion;
+    // Relacion con ResponsableTecnico
+    private List<ResponsableTecnico> responsablesTecnicos;
+    // Relacion con EstacionMeteorologica
+    private List<EstacionMeteorologica> estacionesMeteorologicas;
+    // Relacion con Sensor
+    private List<Sensor> sensores;
 
 
     // Constructor
