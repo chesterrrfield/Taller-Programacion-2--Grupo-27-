@@ -20,6 +20,7 @@ public class EquipoRespuesta {
     public String getIdEquipo() { return this.idEquipo; }
     public String getNombreEquipo() { return this.nombreEquipo; }
     public boolean getDisponible() { return this.disponible; }
+    public void setDisponible(boolean disponible) { this.disponible = disponible; }
 
     // Metodo agregarIntegrante (r:ResponsableTecnico): void
     public void agregarIntegrante(ResponsableTecnico r) {

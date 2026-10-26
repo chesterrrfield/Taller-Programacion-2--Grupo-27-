@@ -4,10 +4,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
-/**
- *representa una zona geografica o cuenca hidrografica
- *contiene los umbrales de precipitación para la evaluación de riesgo y la emisión de alertas
- */
 public class ZonaGeografica {
 
     private String idZona;
@@ -20,8 +16,8 @@ public class ZonaGeografica {
     private double umbralNaranja;
     private double umbralRoja;
 
-    //relacioness
-    private List<EstacionMeteorologica> estaciones;
+    // Relaciones
+    List<EstacionMeteorologica> estaciones;
     private List<ValorHistorico> valoresHistoricos;
     private List<Alerta> alertasEmitidas;
 
