@@ -1,20 +1,25 @@
+import java.util.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
+
 public class Sensor{
   //Atriputos
   private String idSensor;
   private String marca;
   private String modelo;
-  private double presicion;
+  private double precision;
   private EstadoOperativo estado;
   private LocalDate ultimaCalibracion;
   private List<Medicion> mediciones;
 
   //Constructor
-  public Sensor(String idSensor, String marca, String modelo, double presicion, LocalDate ultimaCalibracion){
+  public Sensor(String idSensor, String marca, String modelo, double precision, LocalDate ultimaCalibracion){
     this.idSensor = idSensor;
     this.marca = marca;
     this.modelo = modelo;
-    this.presicion = presicion;
-    this.estado = EstadoOperativo.OPERATIVO; //por defectp
+    this.precision = precision;
+    this.estado = EstadoOperativo.OPERATIVO; //por defecto
     this.ultimaCalibracion = ultimaCalibracion;
     this.mediciones = new ArrayList<>();
   }
@@ -59,13 +64,13 @@ public class Sensor{
     return idSensor;
   }
   public String getMarca(){
-    return idSensor;
+    return marca;
   }
   public String getModelo(){
     return modelo;
   }
-  public double getPresicion(){
-    return presicion;
+  public double getPrecision(){
+    return precision;
   }
   public EstadoOperativo getEstado(){
     return estado;
@@ -81,7 +86,7 @@ public class Sensor{
   public void setEstado(EstadoOperativo estado){
     this.estado = estado;
   }
-  public void setUltimaCalibracion(LocalData ultimaCalibracion){
+  public void setUltimaCalibracion(LocalDate ultimaCalibracion){
     this.ultimaCalibracion = ultimaCalibracion;
   }
 }
