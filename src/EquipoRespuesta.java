@@ -25,6 +25,7 @@ public class EquipoRespuesta {
         this.disponible = disponible; 
     }
 
+
     // Metodo agregarIntegrante (r:ResponsableTecnico): void
     public void agregarIntegrante(ResponsableTecnico r) {
         this.integrantes.add(r);

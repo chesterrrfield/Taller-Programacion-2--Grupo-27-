@@ -19,7 +19,7 @@ public class Sensor{
     this.marca = marca;
     this.modelo = modelo;
     this.precision = precision;
-    this.estado = EstadoOperativo.OPERATIVO; //por defecto
+    this.estado = EstadoOperativo.OPERATIVO; //por defectp
     this.ultimaCalibracion = ultimaCalibracion;
     this.mediciones = new ArrayList<>();
   }

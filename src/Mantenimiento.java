@@ -29,12 +29,6 @@ public class Mantenimiento {
     public TipoMantenimiento getTipo() { return this.tipo; }
     public String getDescripcion() { return this.descripcion; }
 
-     private ResponsableTecnico responsableTecnico;
-    // Relacion con EstacionMeteorologica
-    private EstacionMeteorologica estacionMeteorologica;
-    // Relacion con Sensor
-    private Sensor sensor;
-
     // Setter y Getter para ResponsableTecnico
     public ResponsableTecnico getResponsableTecnico() { return responsableTecnico; }
     public void setResponsableTecnico(ResponsableTecnico responsableTecnico) { this.responsableTecnico = responsableTecnico; }

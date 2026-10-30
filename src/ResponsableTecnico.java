@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class ResponsableTecnico extends Persona {
     // Atributos
     private String especialidad;
