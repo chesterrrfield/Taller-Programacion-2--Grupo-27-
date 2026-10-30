@@ -12,10 +12,13 @@ public class ResponsableTecnico extends Persona {
     private List<Mantenimiento> mantenimientosRealizados;
 
     // Constructor
-    public ResponsableTecnico (String dni, String nombre, String apellido, String correoElectronico, String celular, String especialidad, String numeroLicencia) {
-        super(dni,nombre,apellido,correoElectronico,celular);
+    public ResponsableTecnico(String dni, String nombre, String apellido, String correoElectronico, String celular, String especialidad, String numeroLicencia, EquipoRespuesta equipo) {
+        super(dni, nombre, apellido, correoElectronico, celular);
         this.especialidad = especialidad;
         this.numeroLicencia = numeroLicencia;
+        this.equipo = equipo;
+        this.estacionesACargo = new ArrayList<>();
+        this.mantenimientosRealizados = new ArrayList<>();
     }
 
     // Getters
