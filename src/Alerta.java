@@ -12,6 +12,7 @@ public class Alerta {
     private String descripcion;
     private boolean atendida;
     private EquipoRespuesta equipoAsignado;
+    private ZonaGeografica zona;
 
     /**
      * Constructor completo para registrar una nueva alerta
@@ -25,6 +26,7 @@ public class Alerta {
         this.descripcion = descripcion;
         this.atendida = false;
         this.equipoAsignado = null;
+        this.zona = zona;
     }
 
     /**
@@ -79,7 +81,9 @@ public class Alerta {
     public EquipoRespuesta getEquipoAsignado() {
         return equipoAsignado;
     }
-
+    public ZonaGeografica getZona() {
+        return zona;
+    }
     @Override
     public String toString() {
         return "Alerta{" +
