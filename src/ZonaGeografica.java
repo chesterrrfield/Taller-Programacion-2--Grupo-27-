@@ -110,10 +110,9 @@ public class ZonaGeografica {
         }
     }
 
-    public void agregarValorHistorico(ValorHistorico v) {
-        if (v != null) {
-            valoresHistoricos.add(v);
-        }
+    public void agregarValorHistorico(int mes, double acumuladoMedio) {
+        ValorHistorico nuevoValor = new ValorHistorico(mes, acumuladoMedio);
+        valoresHistoricos.add(nuevoValor);
     }
 
     //getters y setters
