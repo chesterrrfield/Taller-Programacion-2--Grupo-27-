@@ -6,7 +6,7 @@ public class ValorHistorico {
     private ZonaGeografica zona;
 
     // Constructor
-    public ValorHistorico (int mes, double acumuladoMedio) {
+    private ValorHistorico (int mes, double acumuladoMedio) {
         this.mes = mes;
         this.acumuladoMedio = acumuladoMedio;
     }
