@@ -1,5 +1,16 @@
+import alertas.Alerta;
+import enums.NivelAlerta;
+import enums.NivelVulnerabilidad;
+import enums.TipoEstacion;
+import enums.TipoEventoClimatico;
+import estaciones.EstacionMeteorologica;
+import estaciones.Sensor;
+import geografia.ZonaGeografica;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import personas.EquipoRespuesta;
+import personas.ResponsableTecnico;
+
 
 public class Pruebas {
     public static void main (String[] args){
@@ -19,10 +30,9 @@ public class Pruebas {
         System.out.println("Zona geografica creada: " + zonaNorte.getNombre());
 
         //creacion de Responsables Tecninos
-        ResponsableTecnico tecnico1 = new ResponsableTecnico("25.724.213","Santiago","Silva","tanquesilva9@hotmail.com", "+54 9 11 8876-2405","Mantenimiento de Sensores","LIC-987654");
+        ResponsableTecnico tecnico1 = new ResponsableTecnico("25.724.213","Santiago","Silva","tanquesilva9@hotmail.com", "+54 9 11 8876-2405","Mantenimiento de Sensores","LIC-987654", null);
 
-        ResponsableTecnico tecnico2 = new ResponsableTecnico("30.123.456", "David", "Quint", "david1905@email.com", "+54 9 11 2606-5678", "Hidrologia y Emergencias", "LIC-112233"
-        );
+        ResponsableTecnico tecnico2 = new ResponsableTecnico("30.123.456", "David", "Quint", "david1905@email.com", "+54 9 11 2606-5678", "Hidrologia y Emergencias", "LIC-112233",null);
 
         //crear equipo de respuesta tecnica
         EquipoRespuesta equipoRescate = new EquipoRespuesta("EQ-01", "Brigada de Emergencia Fluvial", true);

@@ -1,3 +1,4 @@
+package enums;
 public enum NivelAlerta {
     // Definición de las constantes con el valor que tomarán
     VERDE(false),
