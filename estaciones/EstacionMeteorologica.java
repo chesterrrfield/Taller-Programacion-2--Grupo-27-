@@ -40,7 +40,7 @@ public class EstacionMeteorologica {
         this.mantenimientos = new ArrayList<>();
     }
 
-    //metodos de comportamiento
+    // Metodos de comportamiento
     public void instalarSensor(Sensor s) {
         if (s != null && !sensores.contains(s)) {
             sensores.add(s);
@@ -56,10 +56,54 @@ public class EstacionMeteorologica {
     public boolean estaOperativa() {
         return this.estado == EstadoOperativo.OPERATIVO;
     }
-    
+
     public void agregarMantenimiento(Mantenimiento m) {
         if (m != null && !mantenimientos.contains(m)) {
             mantenimientos.add(m);
+        }
+    }
+
+    public double obtenerPromedioPrecipitaciones() {
+        if (sensores == null || sensores.isEmpty()) {
+            return 0.0;
+        }
+        double sumaTotal = 0.0;
+        int cantidadMediciones = 0;
+
+        for (Sensor sensor : sensores) {
+            for (Medicion m : sensor.getMediciones()) {
+                sumaTotal += m.getMilimetros();
+                cantidadMediciones++;
+            }
+        }
+        return cantidadMediciones == 0 ? 0.0 : sumaTotal / cantidadMediciones;
+    }
+
+    public Medicion obtenerUltimaMedicion() {
+        Medicion ultima = null;
+        for (Sensor sensor : sensores) {
+            for (Medicion m : sensor.getMediciones()) {
+                if (ultima == null || m.getFechaHora().isAfter(ultima.getFechaHora())) {
+                    ultima = m;
+                }
+            }
+        }
+        return ultima;
+    }
+
+    public int contarSensoresDefectuosos() {
+        int contador = 0;
+        for (Sensor sensor : sensores) {
+            if (sensor.getEstado() == EstadoOperativo.FUERA_DE_SERVICIO || sensor.requiereCalibracion()) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+
+    public void cambiarEstado(EstadoOperativo nuevoEstado) {
+        if (nuevoEstado != null) {
+            this.estado = nuevoEstado;
         }
     }
 
@@ -119,4 +163,14 @@ public class EstacionMeteorologica {
     public List<Mantenimiento> getMantenimientos() {
         return Collections.unmodifiableList(mantenimientos);
     }
+    
+    @Override
+    public String toString() {
+        return "Estacion: " + nombre +
+                " | Estado: " + estado +
+                " | Sensores defectuosos: " + contarSensoresDefectuosos() +
+                " | Promedio Lluvia: " + obtenerPromedioPrecipitaciones() + " mm";
+    }
+
 }
+
