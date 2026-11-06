@@ -1,8 +1,5 @@
 import alertas.Alerta;
-import enums.NivelAlerta;
-import enums.NivelVulnerabilidad;
-import enums.TipoEstacion;
-import enums.TipoEventoClimatico;
+import enums.*;
 import estaciones.EstacionMeteorologica;
 import estaciones.Sensor;
 import geografia.ZonaGeografica;
@@ -10,6 +7,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import personas.EquipoRespuesta;
 import personas.ResponsableTecnico;
+import estaciones.Medicion;
 
 
 public class Pruebas {
