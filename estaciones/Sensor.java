@@ -11,14 +11,16 @@ import java.util.List;
 import java.util.UUID;
 
 public class Sensor{
-  //Atriputos
+  //Atributos
   private String idSensor;
   private String marca;
   private String modelo;
   private double precision;
   private EstadoOperativo estado;
+  private EstacionMeteorologica estacion;
   private LocalDate ultimaCalibracion;
   private List<Medicion> mediciones;
+
 
   //Constructor
   public Sensor(String idSensor, String marca, String modelo, double precision, LocalDate ultimaCalibracion){
@@ -26,7 +28,8 @@ public class Sensor{
     this.marca = marca;
     this.modelo = modelo;
     this.precision = precision;
-    this.estado = EstadoOperativo.OPERATIVO; //por defectp
+    this.estado = EstadoOperativo.OPERATIVO; //por defecto
+      this.estacion = estacion;
     this.ultimaCalibracion = ultimaCalibracion;
     this.mediciones = new ArrayList<>();
   }
@@ -88,6 +91,12 @@ public class Sensor{
   public List<Medicion> getMediciones(){
     return Collections.unmodifiableList(mediciones);
   }
+    public void setEstacion(EstacionMeteorologica estacion){
+        this.estacion = estacion;
+    }
+    public EstacionMeteorologica getEstacion(){
+      return estacion;
+    }
 
   
   public void setEstado(EstadoOperativo estado){
