@@ -53,6 +53,16 @@ public class Pruebas {
         estacion1.instalarSensor(sensor1);
         System.out.println("Sensor instalado en estacion: " + sensor1.getIdSensor());
 
+        // Prueba de metodos de comportamiento de Estacion Meteorologica
+        Medicion ultima = estacion1.obtenerUltimaMedicion();
+        if (ultima != null) {
+            System.out.println("Última lectura: " + ultima.getMilimetros() + " mm el " + ultima.getFechaHora());
+        } else {
+            System.out.println("No hay mediciones registradas.");
+        }
+        
+        estacion1.cambiarEstado(EstadoOperativo.EN_MANTENIMIENTO);
+
         //registro mediciones de prueba y verificar reglas de negocio
         try {
             System.out.println("\n--- Registrando lecturas de precipitación ---");
