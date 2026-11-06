@@ -89,6 +89,7 @@ public class Pruebas {
             System.out.println("Error durante la prueba de registros: " + e.getMessage());
         }
 
-
+        // Mostrar todos los datos de la Estacion Meteorolgica
+        System.out.println("\n"+estacion1);
     }
 }
