@@ -55,6 +55,11 @@ public class Alerta {
         }
     }
 
+    // Finaliza la vigencia de la alerta.
+    public void cerrarAlerta() {
+        this.atendida = true;
+    }
+
     //getters y setters
     public String getIdAlerta() {
         return idAlerta;
